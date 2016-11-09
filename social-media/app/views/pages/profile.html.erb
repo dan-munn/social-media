@@ -18,8 +18,9 @@
             </div>
         </div>
     </div>
+            <%= render '/components/post_form' %>
+
     <div class="col-xs-6">
-        <%= render '/components/post_form' %>
         <% for @p in @posts %>
         <div class="panel panel-default">
             <div class="panel-body">

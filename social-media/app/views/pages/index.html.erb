@@ -1,2 +1,64 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<% if !user_signed_in? %>
+<style>
+    body {
+        background: url("/world-image2.jpg") no-repeat center center fixed;
+        linear-gradient(left, rgba (0, 0, 0, 0.5),right, rgba (0, 0, 0, ,0.7));
+        
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -chrome-background-size: cover;
+        background-size: cover;
+    }
+    
+    h1 {
+        color: white;
+        font-weight: 300;
+    }
+    
+    p {
+       color: white;
+       font-weight: 300;
+       font-size: 150%;
+    }
+    
+    .container-index {
+        margin-right: 25%;
+        margin-left: 25%;
+    }
+    
+    .login {
+        float: right;
+        width: 300px;
+        height:150px;
+    }
+    
+    .sign-up {
+        float: right;
+        width: 300px;
+        height:250px;
+    }
+    
+</style>
+
+    </br></br></br></br></br>
+<div class="container-index">
+    <div class="col-sm-6">
+        <h1>Welcome to Social Web.</h1>
+        <p>Connect with friends. Share your adventures. chat with
+            anyone!</p>
+    </div>
+</div>
+<div class="col-sm-6">
+    <div class="login panel">
+        
+    </div>
+    <div class="sign-up panel">
+        
+    </div>
+</div>
+</div>
+<% else %> 
+
+<script>document.location = "/home"</script>
+
+<% end %>
